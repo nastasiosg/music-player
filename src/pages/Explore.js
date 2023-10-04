@@ -1,55 +1,19 @@
 import React from 'react';
-
-// Icons
-import searchIconGrey from '../assets/icons/search-grey.svg';
-import notificationIcon from '../assets/icons/notification.svg';
-import profileIcon from '../assets/icons/profile.png';
 // Img
 import birdsCover from '../assets/img/birds.jpeg';
 import sorry4 from '../assets/img/sorry4.webp';
 import mOm from '../assets/img/Kid-Cudi-3.webp';
 import damn from '../assets/img/damn.jpeg';
 // Components
-import DarkModeButton from '../components/DarkModeButton';
+import TopNav from '../components/TopNav';
 import DailyMixItems from '../components/DailyMixItems';
 import FeaturedItems from '../components/FeaturedItems';
 
 function Explore() {
   return (
     <div className="py-3 text-main-beige overflow-x-auto h-main-height scrollbar-hide">
-      <div className="flex px-6 w-full py-1 justify-between mb-7">
-        <div className="">
-          {/* Icon on click Open input */}
-          <label htmlFor="site-search" className="relative">
-            <img
-              src={searchIconGrey}
-              alt="Search Icon"
-              className="w-4 absolute mt-[7px] ml-1"
-            />
-            <input
-              type="search"
-              placeholder="What do you want to listen to?"
-              className=" rounded-md pl-6 py-1 w-64 bg-main-beige border text-sm text-main-black"
-            ></input>
-          </label>
-        </div>
-        <div className="">
-          <ul className="flex gap-4 items-center">
-            <DarkModeButton />
-            <li className="cursor-pointer">
-              <img
-                src={notificationIcon}
-                alt="Notification Icon"
-                className="w-5"
-              />
-            </li>
-            <li className="cursor-pointer">
-              <img src={profileIcon} alt="Profile Icon" className="w-5" />
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="pl-6 mb-2">
+      <TopNav />
+      <div className="pl-6 mb-2 mt-7">
         <h1 className="font-bold text-main-mint text-lg tracking-wide">
           Featured Albums
         </h1>

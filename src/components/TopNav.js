@@ -1,8 +1,10 @@
 import React from 'react';
+// Components
+import ProfileIcon from './TopNav/ProfileIcon';
 // Icons
 import searchIconGrey from '../assets/icons/search-grey.svg';
 import notificationIcon from '../assets/icons/notification.svg';
-import profileIcon from '../assets/icons/profile.png';
+// import profileIcon from '../assets/icons/profile.png';
 // Components
 import DarkModeButton from './DarkModeButton';
 function TopNav() {
@@ -34,7 +36,7 @@ function TopNav() {
             />
           </li>
           <li className="cursor-pointer">
-            <img src={profileIcon} alt="Profile Icon" className="w-5" />
+            <ProfileIcon />
           </li>
         </ul>
       </div>
