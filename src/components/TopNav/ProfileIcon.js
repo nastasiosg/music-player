@@ -21,11 +21,11 @@ function ProfileIcon() {
   };
 
   const handleLogout = () => {
-    localStorage.clear();
+    localStorage.removeItem('token');
     closeModal();
     navigate('/login');
   };
-  
+
   return (
     <div>
       <ul>
@@ -42,8 +42,12 @@ function ProfileIcon() {
         overlayClassName="fixed inset-0"
       >
         <ul className="text-sm leading-8 mx-auto text-main-black">
-          <li className="cursor-pointer">Profile</li>
-          <li className="cursor-pointer">Add Music</li>
+          <li className="cursor-pointer">
+            <a href="/profile">Profile</a>
+          </li>
+          <li className="cursor-pointer">
+            <a href="/add-music">Add Music</a>
+          </li>
           <li className="cursor-pointer">
             <LogoutButton onLogout={handleLogout} />
           </li>

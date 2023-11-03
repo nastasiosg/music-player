@@ -113,7 +113,7 @@ function Explore() {
                 </div>
                 <div className="">
                   <ul className="flex justify-between">
-                    <li className="font-bold">House</li>
+                    <li className="font-bold">Techno</li>
                     <li className="font-bold">-></li>
                   </ul>
                 </div>
@@ -137,7 +137,7 @@ function Explore() {
                 </div>
                 <div className="">
                   <ul className="flex justify-between">
-                    <li className="font-bold">Classic</li>
+                    <li className="font-bold">Country</li>
                     <li className="font-bold">-></li>
                   </ul>
                 </div>
@@ -150,7 +150,7 @@ function Explore() {
                 </div>
                 <div className="">
                   <ul className="flex justify-between">
-                    <li className="font-bold">Individual</li>
+                    <li className="font-bold">Jazz</li>
                     <li className="font-bold">-></li>
                   </ul>
                 </div>
@@ -161,7 +161,7 @@ function Explore() {
                 </div>
                 <div className="">
                   <ul className="flex justify-between">
-                    <li className="font-bold">Classic</li>
+                    <li className="font-bold">Individual</li>
                     <li className="font-bold">-></li>
                   </ul>
                 </div>

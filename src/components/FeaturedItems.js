@@ -6,19 +6,15 @@ function FeaturedItems(props) {
   var imgSrc = props.imgSrc;
   var imgAlt = props.imgAlt;
   if (album.length > 9) {
-      album = album.slice(0, 9).trim() + '..';
-    }
-    if (artist.length > 5) {
-      artist = artist.slice(0, 5).trim() + '..';
-    }
+    album = album.slice(0, 9).trim() + '..';
+  }
+  if (artist.length > 5) {
+    artist = artist.slice(0, 5).trim() + '..';
+  }
   return (
     <ul className="flex flex-col justify-center items-start">
       <li className="">
-        <img
-          src={imgSrc}
-          className="w-32 h-32 rounded-md"
-          alt={imgAlt}
-        />
+        <img src={imgSrc} className="w-32 h-32 rounded-md" alt={imgAlt} />
       </li>
       <div className="flex mt-1 mx-auto">
         <li className="text-sm">{album}</li>

@@ -27,6 +27,8 @@ function Login() {
         const { token } = data;
         localStorage.setItem('token', token);
         console.log('login erfolgreich', data);
+        // Reload site to update user information
+        window.location.reload();
         // TO DO navigate user to another page
       } else {
         const errorData = await response.json();
