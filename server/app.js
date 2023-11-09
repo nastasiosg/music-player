@@ -22,11 +22,11 @@ connectDB()
   });
 
 app.use('/uploads', express.static('public/uploads'));
-app.use('/uploads', express.static('public/uploads/songs'));
+app.use('/uploads/songs', express.static('public/uploads/songs'));
 
 app.use('/auth', auth);
 app.use('/api', album);
-app.use('/api/songs', song);
+app.use('/api', song);
 
 app.listen(PORT, () => {
   console.log(`App listens on http://localhost:${PORT}`);

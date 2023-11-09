@@ -55,7 +55,9 @@ function AddMusic({ username }) {
           coverImage: null,
           genre: '',
         });
-        const albumName = albumData.title.replace(/\s+/g, '-').toLowerCase();
+        // const albumName = albumData.title.replace(/\s+/g, '-').toLowerCase();
+        // .replace(/\s+/g, '-').toLowerCase()
+        const albumName = albumData.title;
         navigate(`/albums/${albumName}`);
       } else {
         console.error('Failed to add album');

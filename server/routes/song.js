@@ -2,7 +2,7 @@ import express from 'express';
 import multer from 'multer';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import * as songController from '../controller/songController.js';
+import { uploadSong, getAllSongs, getSongsForAlbum } from '../controller/songController.js';
 
 const router = express.Router();
 
@@ -23,6 +23,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.post('/', upload.single('songFile'), songController.uploadSong);
+router.post('/songs', upload.single('songFile'), uploadSong);
+router.get('/songs', getAllSongs);
+router.get('/songs/for-album/:albumId', getSongsForAlbum);
 
 export default router;
