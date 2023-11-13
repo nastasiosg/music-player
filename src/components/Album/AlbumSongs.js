@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 function AlbumSongs() {
   const [songs, setSongs] = useState([]);
   const { albumName } = useParams();
-  // const [albumId, setAlbumId] = useState(null);
 
   useEffect(() => {
     const fetchSongs = async () => {
@@ -15,7 +14,7 @@ function AlbumSongs() {
         if (!responseAlbumId.ok) {
           console.errer('Album not found');
           return;
-        } 
+        }
 
         const dataAlbumId = await responseAlbumId.json();
         const albumId = dataAlbumId._id;
@@ -37,14 +36,17 @@ function AlbumSongs() {
 
     fetchSongs();
   }, [albumName]);
-
+  
   return (
-    <div>
-      <h2>Songs:</h2>
+    <div className="mt-3">
       <ul>
-        {songs.map((song) => (
-          <li key={song._id}>
-            {song.title} - {song.length}
+        {songs.map((song, index) => (
+          <li key={song._id} className="text-main-mint text-sm">
+            {index + 1}. {song.title} – {song.length} 
+            <audio controls>
+              <source src={`/uploads/songs/${song.songFile}`} type="audio/mp3" />
+              Your browser doesn't support the audio element.
+            </audio>
           </li>
         ))}
       </ul>

@@ -47,7 +47,6 @@ function AddMusic({ username }) {
       });
 
       if (response.ok) {
-        // console.log(formData);
         // Reset form
         setAlbumData({
           title: '',
@@ -55,8 +54,6 @@ function AddMusic({ username }) {
           coverImage: null,
           genre: '',
         });
-        // const albumName = albumData.title.replace(/\s+/g, '-').toLowerCase();
-        // .replace(/\s+/g, '-').toLowerCase()
         const albumName = albumData.title;
         navigate(`/albums/${albumName}`);
       } else {

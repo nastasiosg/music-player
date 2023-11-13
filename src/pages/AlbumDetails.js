@@ -6,8 +6,6 @@ import TopNav from '../components/TopNav';
 import AddSong from '../components/Album/AddSong';
 import AlbumSongs from '../components/Album/AlbumSongs';
 
-const cudi = '/uploads/1699275586954-70328888.webp';
-
 function AlbumDetails() {
   const [album, setAlbum] = useState({});
   const { albumName } = useParams();
@@ -22,7 +20,6 @@ function AlbumDetails() {
         );
         if (response.ok) {
           const albumData = await response.json();
-          // console.log(albumData)
           setAlbum(albumData);
         } else {
           console.error('Failed to fetch album data');
@@ -49,7 +46,7 @@ function AlbumDetails() {
     <div className="py-3">
       <TopNav />
       <div className="flex flex-col mt-7 px-6">
-        <img src={cudi} alt={album.title} className="rounded-md w-20" />
+        <img src={albumImg} alt={album.title} className="rounded-md w-20" />
         <h1 className="text-lg font-bold text-main-mint">{album.title}</h1>
         <div className="flex items-center gap-1 text-xs text-main-mint">
           <p className="">{album.artist}</p>

@@ -19,7 +19,6 @@ function AddSong() {
         if (response.ok) {
           const data = await response.json();
           setAlbumId(data._id);
-          console.log(data._id);
         } else {
           console.error('Album not found');
         }
@@ -67,12 +66,8 @@ function AddSong() {
           length: '',
           songFile: null,
         });
-        console.log(songFormData);
-        console.log(songData);
       } else {
         console.error('Failed to upload song');
-        console.log(songFormData);
-        console.log(songData);
       }
     } catch (error) {
       console.error(error);

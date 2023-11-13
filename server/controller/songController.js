@@ -1,6 +1,5 @@
 import Song from '../models/Song.js';
 import Album from '../models/Album.js';
-// import { deleteSongsWithoutAlbumId } from './deleteSongsWithoutAlbumId.js';
 
 export async function uploadSong(req, res) {
   try {
@@ -14,7 +13,6 @@ export async function uploadSong(req, res) {
       songFile: req.file.filename,
       album: albumId,
     });
-    // console.log(newSong.title, newSong.album);
     const savedSong = await newSong.save();
     console.log('Song uploaded', savedSong);
 
